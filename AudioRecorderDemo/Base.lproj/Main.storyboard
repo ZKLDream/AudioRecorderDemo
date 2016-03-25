@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="voice_0.png" translatesAutoresizingMaskIntoConstraints="NO" id="dlB-O8-Up3">
+                                <rect key="frame" x="10" y="40" width="101" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33.5" id="Yoc-Kd-mZp"/>
+                                    <constraint firstAttribute="width" constant="101" id="bZS-If-pKm"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Lty-0Q-Wuz" appends="YES" id="yTZ-3c-QHA"/>
+                                    <outletCollection property="gestureRecognizers" destination="Lty-0Q-Wuz" appends="YES" id="nKh-cB-kzJ"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0''" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9P-qU-cSG">
+                                <rect key="frame" x="131" y="46" width="18" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byu-Jm-WR3">
+                                <rect key="frame" x="10" y="467" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="VY0-hf-0iK"/>
+                                    <constraint firstAttribute="height" constant="51" id="sjP-LJ-Lm5"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="voice_play.png"/>
+                                <connections>
+                                    <action selector="playPauseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6oV-D0-Jga"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEz-ds-JkL">
+                                <rect key="frame" x="259" y="467" width="51" height="51"/>
+                                <state key="normal" backgroundImage="voice_delete.png"/>
+                                <connections>
+                                    <action selector="deleteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gu3-7L-RKP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2T-Oi-Q5D">
+                                <rect key="frame" x="115" y="447" width="91" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="WFC-Vn-ZGR"/>
+                                    <constraint firstAttribute="width" secondItem="H2T-Oi-Q5D" secondAttribute="height" multiplier="1:1" id="fFD-lE-VUt"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="voice_record.png"/>
+                                <connections>
+                                    <action selector="cancelRecordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WlI-j6-80e"/>
+                                    <action selector="recordAction:" destination="BYZ-38-t0r" eventType="touchDown" id="DtS-Rs-B9C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="长按 录音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9a-q8-mFO">
+                                <rect key="frame" x="124" y="548" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Z9a-q8-mFO" firstAttribute="top" secondItem="H2T-Oi-Q5D" secondAttribute="bottom" constant="10" id="0BX-kv-29T"/>
+                            <constraint firstItem="H2T-Oi-Q5D" firstAttribute="centerX" secondItem="Z9a-q8-mFO" secondAttribute="centerX" id="BW9-cB-V9z"/>
+                            <constraint firstItem="vEz-ds-JkL" firstAttribute="centerY" secondItem="H2T-Oi-Q5D" secondAttribute="centerY" id="JWX-jm-5Ph"/>
+                            <constraint firstItem="dlB-O8-Up3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="MeU-sl-4ps"/>
+                            <constraint firstItem="Byu-Jm-WR3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="QtQ-9A-l7B"/>
+                            <constraint firstItem="dlB-O8-Up3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Ur8-GQ-0B1"/>
+                            <constraint firstItem="Byu-Jm-WR3" firstAttribute="centerY" secondItem="H2T-Oi-Q5D" secondAttribute="centerY" id="VR8-pT-vkQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Byu-Jm-WR3" secondAttribute="bottom" constant="50" id="bAr-N3-Pgo"/>
+                            <constraint firstItem="H2T-Oi-Q5D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g7N-v8-uYG"/>
+                            <constraint firstAttribute="trailing" secondItem="vEz-ds-JkL" secondAttribute="trailing" constant="10" id="h0r-QG-kOg"/>
+                            <constraint firstItem="vEz-ds-JkL" firstAttribute="height" secondItem="Byu-Jm-WR3" secondAttribute="height" id="nfk-lr-njf"/>
+                            <constraint firstItem="vEz-ds-JkL" firstAttribute="width" secondItem="Byu-Jm-WR3" secondAttribute="width" id="tCT-Dn-H4M"/>
+                            <constraint firstItem="V9P-qU-cSG" firstAttribute="leading" secondItem="dlB-O8-Up3" secondAttribute="trailing" constant="20" id="vDf-aB-i0s"/>
+                            <constraint firstItem="V9P-qU-cSG" firstAttribute="centerY" secondItem="dlB-O8-Up3" secondAttribute="centerY" id="vfb-fE-6W3"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Lty-0Q-Wuz" appends="YES" id="dKW-FQ-fzO"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="audioImageView" destination="dlB-O8-Up3" id="ZHw-bF-Nuh"/>
+                        <outlet property="audioTimeLable" destination="V9P-qU-cSG" id="9lP-QK-4Q6"/>
+                        <outlet property="msgLable" destination="Z9a-q8-mFO" id="b23-QB-ehl"/>
+                        <outlet property="playPauseButton" destination="VR8-pT-vkQ" id="OAy-Xg-jhF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Lty-0Q-Wuz">
+                    <connections>
+                        <action selector="testTap:" destination="BYZ-38-t0r" id="Uu7-V9-ZNc"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="258" y="286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="voice_0.png" width="202" height="67"/>
+        <image name="voice_delete.png" width="102" height="105"/>
+        <image name="voice_play.png" width="102" height="105"/>
+        <image name="voice_record.png" width="182" height="182"/>
+    </resources>
+</document>
